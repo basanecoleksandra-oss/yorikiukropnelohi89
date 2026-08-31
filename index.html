@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Лощня 🥰 — секретный день рождения</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Pacifico&display=swap');
+:root{--pink:#ff7eb6;--hot:#ff3f91;--light:#fff0f7;--deep:#7b2856;--white:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Comfortaa,sans-serif;color:var(--deep);background:
+radial-gradient(circle at 10% 10%,#fff 0 7%,transparent 8%),
+radial-gradient(circle at 90% 25%,#ffd6e9 0 8%,transparent 9%),
+linear-gradient(135deg,#fff7fb,#ffe5f1 50%,#fff);
+overflow-x:hidden}
+section{max-width:1050px;margin:auto;padding:70px 20px}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;position:relative}
+.card{background:#ffffffd9;border:2px solid #fff;box-shadow:0 18px 50px #d9488a2e;border-radius:32px;padding:34px}
+h1{font-family:Pacifico,cursive;font-size:clamp(45px,10vw,92px);margin:8px 0;color:var(--hot);text-shadow:3px 4px #ffc4df}
+h2{font-size:clamp(28px,5vw,46px);text-align:center;margin:0 0 25px}
+p{line-height:1.7}
+.subtitle{font-size:clamp(16px,3vw,23px)}
+.btn{border:0;border-radius:999px;padding:14px 22px;background:linear-gradient(135deg,var(--hot),#ff9bc5);color:white;font:700 15px Comfortaa;cursor:pointer;box-shadow:0 8px 20px #ff4b992f;transition:.2s}
+.btn:hover{transform:translateY(-3px) rotate(-1deg)}
+.scroll{position:absolute;bottom:25px;animation:bob 1.5s infinite}
+@keyframes bob{50%{transform:translateY(8px)}}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.meme{position:relative;overflow:hidden;transform:rotate(var(--r));transition:.25s;cursor:pointer}
+.meme:hover{transform:rotate(0) scale(1.03)}
+.meme img{width:100%;display:block;border-radius:20px}
+.caption{font-weight:700;text-align:center;padding:14px 5px}
+.note{font-size:14px;opacity:.8}
+.big-joke{font-size:clamp(23px,4vw,40px);font-weight:700;text-align:center;margin:10px 0}
+.vodka{font-size:70px;display:inline-block;filter:drop-shadow(0 5px 3px #0002);transition:.5s}
+.vodka.spin{animation:spin .7s ease}
+@keyframes spin{50%{transform:rotate(30deg) translateY(-15px)}}
+.bar{height:22px;background:#ffd2e6;border-radius:99px;overflow:hidden;margin:18px 0}
+.bar i{display:block;height:100%;width:3%;background:linear-gradient(90deg,#ff8fbe,#ff397f);transition:1s}
+.secret{display:none!important;margin-top:22px;padding:25px;border-radius:24px;background:#21151c;color:#fff;border:3px dashed #ff78b2;text-align:center;font-size:22px;font-weight:700}
+.secret.show{display:block!important;animation:pop .5s}
+@keyframes pop{from{transform:scale(.7);opacity:0}to{transform:scale(1);opacity:1}}
+.cat{position:fixed;z-index:20;left:-120px;bottom:18px;font-size:58px;cursor:pointer;user-select:none;animation:catrun 16s linear infinite}
+@keyframes catrun{0%{left:-120px;transform:scaleX(1)}45%{left:105vw;transform:scaleX(1)}46%{transform:scaleX(-1)}100%{left:-120px;transform:scaleX(-1)}}
+.trail{position:fixed;pointer-events:none;z-index:99;font-size:18px;animation:trail .9s ease-out forwards}
+@keyframes trail{to{transform:translateY(-30px) scale(.3) rotate(30deg);opacity:0}}
+.badge{display:inline-block;background:#fff;border:2px solid #ffc1dd;padding:8px 13px;border-radius:99px;margin:5px;font-size:13px}
+.footer{text-align:center;padding:100px 20px 140px}
+.footer .loch{font-family:Pacifico;font-size:clamp(55px,13vw,120px);color:var(--hot);text-shadow:4px 5px #ffc3de}
+.modal{position:fixed;inset:0;background:#5a173b8c;z-index:50;display:none;place-items:center;padding:20px}
+.modal.show{display:grid}
+.modal .card{max-width:600px;text-align:center}
+.close{float:right;border:0;background:none;font-size:25px;cursor:pointer}
+.small{font-size:12px;opacity:.7}
+</style>
+</head>
+<body>
+
+<div class="cat" id="cat" title="Нажми меня 5 раз">🐈‍⬛</div>
+
+<header class="hero">
+  <div class="card">
+    <div class="badge">💗 100% научно доказанный сайт</div>
+    <h1>С ДНЁМ РОЖДЕНИЯ!</h1>
+    <p class="subtitle">официальный интернет-подарок, созданный на основе любви, рофлов и сомнительных решений</p>
+    <button class="btn" onclick="document.querySelector('#evidence').scrollIntoView()">НАЧАТЬ РАССЛЕДОВАНИЕ 🔎</button>
+    <p class="small">предупреждение: дальше будет много кринжа</p>
+  </div>
+  <div class="scroll">↓ листай, не бойся ↓</div>
+</header>
+
+<section id="evidence">
+  <h2>📁 Доказательства вашей легендарности</h2>
+  <div class="grid">
+    <div class="card meme" style="--r:-2deg" onclick="openModal('Экспонат №1','Да, это реально происходило. Да, это было необходимо сохранить. Нет, объяснений не будет.')">
+      <img src="assets/funny-chat.jpg" alt="Переписка">
+      <div class="caption">«ЗДЕСЬ. НЕ. БУДЕТ. КРУТЫХ. СМЕШНЫХ. ФОТОК. САМА. ВИНОВАТА.»</div>
+    </div>
+    <div class="card meme" style="--r:2deg" onclick="openModal('Лощня detected','Буква Щ официально признана главным спецэффектом этой дружбы.')">
+      <div style="font-size:95px">Щ</div>
+      <div class="caption">ЛОЩНЯ-МЕТР: 📈📈📈</div>
+      <p class="note">*точность прибора ± одна бабушка Ира</p>
+    </div>
+    <div class="card meme" style="--r:-1deg" onclick="openModal('Архив мемов','В этот момент здравый смысл покинул чат и больше не возвращался.')">
+      <div style="font-size:82px">👵🏻 👵🏼</div>
+      <div class="caption">БАБУШКИ ИРА INC.</div>
+      <p class="note">картавость + шепелявость = международный диалект</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <h2>🍾 Дело о бутылке водки</h2>
+    <p class="big-joke">Когда мама идёт гулять с Даной:</p>
+    <div style="text-align:center"><span class="vodka" id="vodka">🍾</span></div>
+    <p style="text-align:center">«На всякий случай. Вдруг будет скучно.»</p>
+    <div class="bar"><i id="boredom"></i></div>
+    <p id="boredomText" style="text-align:center;font-weight:700">уровень скуки: 3%</p>
+    <div style="text-align:center">
+      <button class="btn" onclick="increaseBoredom()">ПРОВЕРИТЬ УРОВЕНЬ СКУКИ</button>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>🎰 Кнопка абсолютно бесполезных решений</h2>
+  <div class="card" style="text-align:center">
+    <p id="randomJoke" class="big-joke">нажми. я не знаю, что будет</p>
+    <button class="btn" onclick="randomJoke()">ЖМЯК 💥</button>
+  </div>
+</section>
+
+<section>
+  <h2>💌 Поздравление, которое я пыталась сделать нормальным</h2>
+  <div class="card">
+    <p>Желаю тебе, чтобы жизнь была настолько прекрасной, чтобы даже мама перестала носить с собой стратегический запас 🍾.</p>
+    <p>Чтобы каждый день происходило что-нибудь смешное, но желательно без последствий, уголовных дел и участия бабушек Иры.</p>
+    <p>Чтобы все твои планы получались, настроение не заканчивалось, а люди вокруг были такими же классными, как ты.</p>
+    <p>И пусть этот год принесёт тебе миллион счастливых моментов, которые потом можно будет превратить в ещё миллион тупых мемов.</p>
+    <p style="text-align:center;font-weight:700;font-size:22px">короче, будь счастлива. а остальное как-нибудь разберёмся. 💗</p>
+  </div>
+</section>
+
+<section>
+  <div class="card" style="text-align:center">
+    <h2>🐈 СЕКРЕТНЫЙ КОТ</h2>
+    <p>По сайту бегает подозрительно чёрно-белый кот.</p>
+    <p><b>Нажми на него 5 раз.</b> Возможно, он знает слишком много.</p>
+    <div class="badge">нажатий: <span id="clicks">0</span>/5</div>
+    <div class="secret" id="secret" aria-hidden="true">ОТВАЛТ ОТ УКРОПА ЛОЩНЯ 🥰</div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>это был официальный документ дружбы</p>
+  <div class="loch">лощня🥰</div>
+  <p>конец. или нет...</p>
+</footer>
+
+<div class="modal" id="modal" onclick="closeModal(event)">
+  <div class="card">
+    <button class="close" onclick="closeModal()">×</button>
+    <h2 id="modalTitle"></h2>
+    <p id="modalText"></p>
+    <button class="btn" onclick="closeModal()">понятно, я лощня</button>
+  </div>
+</div>
+
+<script>
+let boredom=3;
+function increaseBoredom(){
+  boredom=Math.min(100,boredom+Math.floor(Math.random()*18)+8);
+  document.querySelector('#boredom').style.width=boredom+'%';
+  document.querySelector('#boredomText').textContent='уровень скуки: '+boredom+'%';
+  document.querySelector('#vodka').classList.remove('spin');
+  void document.querySelector('#vodka').offsetWidth;
+  document.querySelector('#vodka').classList.add('spin');
+  if(boredom>=80) document.querySelector('#boredomText').textContent='УРОВЕНЬ СКУКИ КРИТИЧЕСКИЙ. БУТЫЛКА УЖЕ ВЫЕХАЛА 🍾';
+}
+const jokes=[
+'Лощня. Просто лощня.',
+'Бабушка Ира одобряет.',
+'Мама уже положила бутылку в сумку.',
+'Это не кринж. Это авторский стиль.',
+'Щ — самая важная буква.',
+'Срочно вызвать кота.',
+'Поздравление прошло проверку на рофл: 97%.',
+'Если что — я ничего не видела.'
+];
+function randomJoke(){
+ document.querySelector('#randomJoke').textContent=jokes[Math.floor(Math.random()*jokes.length)];
+}
+function openModal(title,text){
+ document.querySelector('#modalTitle').textContent=title;
+ document.querySelector('#modalText').textContent=text;
+ document.querySelector('#modal').classList.add('show');
+}
+function closeModal(e){
+ if(!e || e.target.id==='modal' || e.target.classList.contains('close') || e.target.classList.contains('btn'))
+ document.querySelector('#modal').classList.remove('show');
+}
+let catClicks=0;
+document.querySelector('#cat').addEventListener('click',()=>{
+ catClicks++;
+ document.querySelector('#clicks').textContent=catClicks;
+ if(catClicks===5){
+   const secret=document.querySelector('#secret');
+   secret.classList.add('show');
+   secret.setAttribute('aria-hidden','false');
+   secret.scrollIntoView({behavior:'smooth',block:'center'});
+ }
+});
+document.addEventListener('mousemove',e=>{
+ if(Math.random()<0.22){
+  const t=document.createElement('div'); t.className='trail';
+  t.textContent=['✨','⭐','💗','🐰','🌸'][Math.floor(Math.random()*5)];
+  t.style.left=e.clientX+'px'; t.style.top=e.clientY+'px';
+  document.body.appendChild(t); setTimeout(()=>t.remove(),900);
+ }
+});
+</script>
+</body>
+</html>
